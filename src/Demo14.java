@@ -3,10 +3,15 @@ import java.io.*;
 public class Demo14 {
     public static void main(String[] args) throws IOException {
         //综合练习：记录文件运行次数 前三次提示免费 第四次提示收费
+        /*
+        IO流使用习惯:随用随创建 用完即关闭
+         */
         //创建缓冲字符读入流对象
         BufferedReader br = new BufferedReader(new FileReader("cnt.txt"));
         //读取文件中的内容
         String str = br.readLine();
+        //用完 关流
+        br.close();
         //创建缓冲字符写出流对象
         BufferedWriter bw = new BufferedWriter(new FileWriter("cnt.txt"));
         /*
@@ -26,7 +31,7 @@ public class Demo14 {
             System.out.println("第1次运行免费");
         }else{
             //文件不为空
-            cnt = Integer.parseInt(str.substring(1, 2));//获取已运行次数
+            cnt = Integer.parseInt(str.split("第")[1].split("次")[0]);//获取已运行次数
             if (cnt < 3){
                 //已运行次数没有3次 免费
                 cnt++;
@@ -40,9 +45,8 @@ public class Demo14 {
             bw.write("第" + cnt + "次运行");
         }
 
-        //使用完毕 释放资源
+        //用完关流
         bw.close();
-        br.close();
 
     }
 }
