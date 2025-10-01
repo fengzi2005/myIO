@@ -1,4 +1,4 @@
-package ObjectInputStreamAndObjectOutputSteam;
+package myObjectSteam;
 
 import java.io.*;
 
