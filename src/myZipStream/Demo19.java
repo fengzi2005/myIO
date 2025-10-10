@@ -53,7 +53,7 @@ public class Demo19 {
                     fos.write(b);
                 }
                 //释放资源
-                //关写出字符流
+                //关字节输出流
                 fos.close();
             }
             //关解压缩流的一个Entry 意思是 一轮循环结束 则这个Entry操作结束了

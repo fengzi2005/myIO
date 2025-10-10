@@ -27,7 +27,7 @@ public class Demo23 {
         String girlNamestr = getString(url3);
         //System.out.println(boyNamestr);
         //System.out.println(sb);
-        //利用正则表达式从Str中爬取我要的姓氏
+        //利用正则表达式从Str中爬取我要的信息
         //正则表达式对象用Pattern.compile()获取
         ArrayList<String> firstNameTemplist = getInfo(firstNamestr,Pattern.compile("([\\u4E00-\\u9FA5]{4})(，|。)") );
         ArrayList<String> boyNameList = getInfo(boyNamestr,Pattern.compile("([\\u4E00-\\u9FA5]{2})(、|。)") );
@@ -57,8 +57,11 @@ public class Demo23 {
     private static ArrayList<String> getList(ArrayList<String> firstNameList, ArrayList<String> boyNameList, ArrayList<String> girlNameList, int boyCnt, int girlCnt) {
         //创建集合用于存储姓名
         ArrayList<String> list = new ArrayList<>();
+        //随机生成男孩姓名并存入集合中
         getFinalNameList(firstNameList, boyNameList, boyCnt, "-男-",list);
+        //随机生成女孩姓名并存入集合中
         getFinalNameList(firstNameList,girlNameList,girlCnt,"-女-",list);
+        //返回生成的姓名集合
         return list;
     }
 
@@ -128,6 +131,7 @@ public class Demo23 {
     }
 
     private static String getString(URL url) throws IOException {
+        //创建一个StringBuilder对象用以拼接网站内容
         StringBuilder sb = new StringBuilder();
 
         //连接网站
@@ -139,6 +143,7 @@ public class Demo23 {
         while ((b = isr.read()) != -1) {
             sb.append((char) b);
         }
+        //返回网站内容
         return sb.toString();
     }
 

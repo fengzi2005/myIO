@@ -7,6 +7,8 @@ public class Student implements Serializable {
     /*
     设置静态版本号 否则文件序列化写出后javabean类发生变化 读入会报错
      */
+
+
     @Serial
     private static final long serialVersionUID = -1261007761561278559L;
     String name;

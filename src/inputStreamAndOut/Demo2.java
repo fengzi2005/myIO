@@ -1,3 +1,5 @@
+package inputStreamAndOut;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 
@@ -38,6 +40,7 @@ public class Demo2 {
         int cnt = 1;
         while ((num = fis2.read(bytes1)) != -1 ){
             System.out.println("第" + cnt + "次");
+            //System.out.println(Arrays.toString(bytes1));数组里读到的字符对应的十进制编码
             System.out.println(new String(bytes1) + " 读了" + num + "个");
             cnt++;
         }

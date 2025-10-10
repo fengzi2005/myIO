@@ -1,9 +1,11 @@
+package bufferStream;
+
 import java.io.*;
 
 public class Demo11 {
     public static void main(String[] args) throws IOException {
         //字符缓冲流
-        //字符缓冲输入流
+        //字符输入缓冲流
         System.out.println("===缓冲字符输入流===");
         //1.创建对象
         /*

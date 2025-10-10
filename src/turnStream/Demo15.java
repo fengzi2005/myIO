@@ -1,3 +1,5 @@
+package turnStream;
+
 import java.io.*;
 import java.nio.charset.Charset;
 
@@ -6,13 +8,13 @@ public class Demo15 {
         //转换流演示
         /*
         转换流使用场景：
-        指定字符集读取数据
-        字节流中想要使用字符流的方法
+        1.指定字符集读取数据(淘汰)
+        2.字节流中想要使用字符流的方法
          */
 
-        //1.利用转换流按指定字符编码读取
+        //1.按指定字符编码读取
 
-        //JDK8 以前：
+        //JDK8 以前：利用转换流
         //字符转换流 把字节流包装成字符流
         /*
         参数一：要包装的字节流 参数二：指定字符集 (用字符串表示)
@@ -27,7 +29,7 @@ public class Demo15 {
         isr1.close();
         osw1.close();
 
-        //JDK8以后：
+        //JDK8以后： 利用字符流
         /*
         用FileReader 和 FileWriter  构造方法第二个参数传入字符集
         字符集不能直接传字符串 要通过Charset.forName("GBK")方法 获取字符集

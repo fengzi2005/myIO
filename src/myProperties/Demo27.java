@@ -26,7 +26,7 @@ public class Demo27 {
 
         //读入配置文件 (文件内容格式要求严格 不加空格 不加分号)
         /*
-        参数为读入字符流或读入字节流
+        参数为字符输入流或字节输入流
          */
         Properties properties2 = new Properties();
         FileInputStream fis = new FileInputStream("src/myProperties/a.properties");

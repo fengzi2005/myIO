@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-public class Demo21 {
+public class   Demo21 {
     public static void main(String[] args) throws IOException {
         //压缩文件夹练习
         //创建两个文件对象 一个表示要压缩的文件夹 一个表示压缩包的位置

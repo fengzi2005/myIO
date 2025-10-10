@@ -1,9 +1,10 @@
+package comprehensiveTest0;
+
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.function.Function;
 
 public class Demo8 {
     public static void main(String[] args) throws IOException {
@@ -26,8 +27,8 @@ public class Demo8 {
                 .map(Integer::parseInt)
                 .sorted()
                 .toArray(Integer[]::new);
-        System.out.println(Arrays.toString(str3)); //此方法同样可以实现排序
-        Arrays.sort(str1);
+        System.out.println(Arrays.toString(str3)); //此方法1同样可以实现排序
+        Arrays.sort(str1);//方法2
         //创建集合并把数都添加到集合中
         ArrayList<Integer> list = new ArrayList<>();
         for (String s : str1) {

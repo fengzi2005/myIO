@@ -1,5 +1,6 @@
+package inputStreamAndOut;
+
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -7,7 +8,7 @@ public class Demo1 {
     public static void main(String[] args) throws IOException {
         //IO流学习
         //字节流 OutputStream 与InputStream 都是抽象类
-        //用 FileOutputStream  FileInputStream作为示范阳历
+        //用 FileOutputStream  FileInputStream作为示范样例
 
         //FileOutputStream
         //1.创建对象

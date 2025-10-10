@@ -1,9 +1,6 @@
+package bufferStream;
+
 import java.io.*;
-import java.time.Duration;
-import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.Period;
-import java.util.Date;
 
 public class Demo12 {
     public static void main(String[] args) throws IOException {
@@ -43,9 +40,9 @@ public class Demo12 {
         while ((b2 = fr1.read()) != -1) {
             fw1.write((char)b2);
         }
-        long l6 = System.currentTimeMillis();
         fw1.close();
         fr1.close();
+        long l6 = System.currentTimeMillis();
         System.out.println("方式三用时：" + (l6-l5) +"毫秒");
 
         //方式四：字符流一个字符数组一个字符数组地读
@@ -57,9 +54,9 @@ public class Demo12 {
         while ((len2 = fr2.read(chars)) != -1) {
             fw2.write(chars,0,len2);
         }
-        long l8 = System.currentTimeMillis();
         fw2.close();
         fr2.close();
+        long l8 = System.currentTimeMillis();
         System.out.println("方式四用时：" + (l8-l7) +"毫秒");
     }
 }

@@ -1,3 +1,5 @@
+package comprehensiveTest0;
+
 import java.io.*;
 
 public class Demo6 {

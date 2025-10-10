@@ -1,3 +1,5 @@
+package bufferStream;
+
 import java.io.*;
 
 public class Demo10 {
@@ -9,7 +11,7 @@ public class Demo10 {
     虽然对字符流提升不大 但字节缓冲流有两个关键方法(字符流本就有缓冲区)
      */
 
-        //字节缓冲输入流
+        //字节读入缓冲流
         //1.创建对象 参数一传递要包装得基本流 参数二传递缓冲区长度,不传默认8192
         /*
         细节与FileInputStream类似

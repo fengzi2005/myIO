@@ -1,6 +1,7 @@
+package bufferStream;
+
 import java.io.*;
 import java.util.*;
-import java.util.function.Consumer;
 
 public class Demo13 {
     public static void main(String[] args) throws IOException {

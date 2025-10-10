@@ -13,7 +13,7 @@ public class Demo18 {
         意思是只能写出不能读入
          */
 
-        //字符打印流
+        //字节打印流
         /*
         特点：无缓冲区
          */
@@ -23,7 +23,7 @@ public class Demo18 {
         构造方法2.传递一个字符串表示文件地址 参数二可传入编码方法(字符串或者Charset.ofname())
         构造方法3.传递一个File对象 参数二可传入编码方法(字符串或者Charset.ofname())
          */
-        PrintStream ps1 = new PrintStream(new FileOutputStream("src//PrintStreamAndPrintWriter//a.txt"),false,"UTF-8");//关了自动刷新也会写到文件中去因为根本没缓冲区
+        PrintStream ps1 = new PrintStream(new FileOutputStream("src//myPrintStream//a.txt"),false,"UTF-8");//关了自动刷新也会写到文件中去因为根本没缓冲区
         /*PrintStream ps2 = new PrintStream("src//PrintStreamAndPrintWriter//a.txt","UTF-8");
         PrintStream ps3 = new PrintStream(new File("src//PrintStreamAndPrintWriter//a.txt"),"UTF-8");*/
         //2.调用方法写出内容
@@ -41,7 +41,7 @@ public class Demo18 {
 
         //字符打印流
         /*
-        特点:有缓冲区 会自动刷新
+        特点:有缓冲区 println()方法会自动刷新
          */
         //1.创建对象
         /*
@@ -51,7 +51,7 @@ public class Demo18 {
         构造方法4.传递一个File对象 参数二可传递编码方式(用字符串或者用Charset.ofname()指定)
         3和4不常用 因为指定编码方式在实际开发中没什么意义
          */
-        PrintWriter pw = new PrintWriter(new FileWriter("src//PrintStreamAndPrintWriter//b.txt"),true);
+        PrintWriter pw = new PrintWriter(new FileWriter("src//myPrintStream//b.txt"),true);
 
         //2.调用方法写出数据
         //(1)write() 字符流原方法

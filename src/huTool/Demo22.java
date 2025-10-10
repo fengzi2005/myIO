@@ -14,6 +14,7 @@ public class Demo22 {
 
         //获取文件对象的方法 类名.file()
         /*
+        该方法创建文件默认在本类字节码文件中 以下绝对路径所指便是此意
         参数：1.直接用字符表示文件路径 得绝对路径带盘符
              2.父类路径(文件/字符串) ＋ 子类位置(字符串)  得相对路径
              3.各个路径名 (可变参数 传多个名字) 绝对路径
@@ -31,6 +32,7 @@ public class Demo22 {
 
         /*File file5 = FileUtil.file(new File("src/huTool"), "aaa", "bbb", "eee");
         FileUtil.touch(file5);*/
+
         //创建文件方法 类名.touch(File file)
         /*
         父级路径不存在则自动创建文件夹 相当于mkdirs() + createNewFile();
